@@ -1,6 +1,13 @@
 const form = document.querySelector(".login-form");
+const inputs = documents.querySelectorAll("input");
 
 form.addEventListener("submit", onFormSubmit);
+
+inputs.foreach(input) => {
+    if (input.value.trim() === '') { 
+    alert("error")
+    }
+};
 
 function onFormSubmit(evt) {
     evt.preventDefault();
