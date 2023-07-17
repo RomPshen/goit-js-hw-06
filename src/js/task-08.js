@@ -1,7 +1,6 @@
 const form = document.querySelector(".login-form");
-const inputs = document.querySelectorAll("input");
 
-form.addEventListener("submit", onFormSubmit);
+form.addEventListener("submit", onFormSubmit );
 
 function onFormSubmit(evt) {
     evt.preventDefault();
@@ -10,17 +9,15 @@ function onFormSubmit(evt) {
     const mail = formEls.email.value;
     const password = formEls.password.value;
 
-    inputs.forEach(input) => {
-        if (formEls.value === "") { 
+        if (mail === "" || password === "") { 
         alert("всі поля повинні бути заповнені")
         };
-    };
 
     const formData = {
         mail,
         password,
     };
     console.log(formData);
-    document.getElementsByClassName(".login-form").reset();
-}
+    form.reset();
+    }
 
