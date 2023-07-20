@@ -4,10 +4,9 @@ const butCreate = document.querySelector("[data-create]");
 const butDestroy = document.querySelector("[data-destroy]");
 const amount = input.value;
 
-console.log(amount);
-
 butCreate.addEventListener("click", createBoxes);
 butDestroy.addEventListener("click", destroyBoxes);
+
 
 function createBoxes(amount) {
   const initialSize = 30;
@@ -22,7 +21,7 @@ function createBoxes(amount) {
 
   setting.appendChild(box);
 }
-
+console.log(amount);
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
