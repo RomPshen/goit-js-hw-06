@@ -11,8 +11,8 @@ function onFormSubmit(evt) {
 
         if (mail === "" || password === "") { 
         alert("всі поля повинні бути заповнені")
-        };
-
+        }
+else {
     const formData = {
         mail,
         password,
@@ -20,4 +20,4 @@ function onFormSubmit(evt) {
     console.log(formData);
     form.reset();
     }
-
+}
